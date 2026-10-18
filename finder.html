@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Finder | Bean Local</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Main content for page -->
+  <main class="container">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="./index.html">Bean Local</a>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./finder.html" class="active" aria-current="page">Coffee Finder / Cafés</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+    </nav>
+    <!-- h1 - page heading -->
+    <h1>COFFEE FINDER <span>Explore Beans & Melbourne Coffee</span></h1>
+    <!-- Section search / sort -->
+    <section class="search-sort">
+      <p class="eyebrow">COFFEE FINDER / CAFÉS</p>
+      <!-- Search / Sort section heading -->
+      <h2>Find Coffee That Matches Your Taste</h2>
+      <p class="section-copy">Search Bean Local’s coffee collection, compare community ratings and keep track of coffees you want to try around Melbourne.</p>
+      <!-- form to get the search string -->
+      <form id="form-list-control">
+        <div class="mb-3">
+          <input 
+            type="search" 
+            placeholder="Search coffee bean..." 
+            name="search-string"
+            aria-label="Search coffee beans by name"
+          >
+        </div>
+        <!-- Buttons to run search and sort functions -->
+        <div class="mb-3">
+          <button type="button" name="btn-search" id="searchBtn" >Search Beans</button>
+          <button type="button" name="btn-a2z" id="sortA2ZBtn" >Name (A - Z)</button>
+          <button type="button" name="btn-z2a" id="sortZ2ABtn" >Name (Z - A)</button>
+        </div>
+      </form>
+    </section>
+    <!-- End of search / sort Section -->
+    <!-- Start Bean list section -->
+    <section id="mList">
+      <!-- Bean List Section heading -->
+      <h2 class="ml-3">Coffee Finder Results</h2>
+      <p class="list-intro ml-3">Browse beans that may appear across Melbourne cafés and roasters. Community ratings use a five-point scale.</p>
+      <!-- Bean list start -->
+      <ol class="list" id="list" aria-live="polite">
+        <li class="row">
+          Ethiopia Guji — Community Rating 5/5
+        </li>
+        <li class="row">
+          Colombia Huila — Community Rating 4/5
+        </li>
+        <li class="row">
+          Brazil Cerrado — Community Rating 4/5
+        </li>
+        <li class="row">
+          Kenya Nyeri — Community Rating 5/5
+        </li>
+        <li class="row">
+          Costa Rica Tarrazú — Community Rating 4/5
+        </li>
+        <li class="row">
+          Indonesia Sumatra — Community Rating 4/5
+        </li>
+        <li class="row">
+          Rwanda Nyamasheke — Community Rating 5/5
+        </li>
+        <li class="row">
+          Guatemala Antigua — Community Rating 4/5
+        </li>
+      </ol>
+      <!-- Bean list end -->
+    </section>
+    <!-- End of Bean list section -->
+    <!-- Section to display messages -->
+    <section id="msg" class="msgBox" role="status" aria-live="polite" tabindex="-1"></section>
+
+    <!-- Start Tab Section -->
+     <!-- The tabs -->
+    <section class="tab">
+      <!-- The buttons to change tabs -->
+      <button class="tablinks" onclick="openForm(event, 'Add')" id="defaultOpen">Add a Coffee</button>
+      <button class="tablinks active" onclick="openForm(event, 'Update')" >Update a Coffee</button>
+      <button class="tablinks" onclick="openForm(event, 'Delete')"> Remove Coffee</button>
+    </section>
+    <!-- End Tab Section -->
+
+    <!-- The tab content. Made up of add bean / update bean / delete bean -->
+    <!-- Add bean form -->
+    <section id="Add" class="tabcontent">
+      <h2>Add a Coffee to Bean Local</h2>
+      <form id="form-add">
+        <div class="mb-3">
+          <label for="addBeanName">Bean: </label>
+          <input type="text" placeholder="Coffee bean name..." name="beanName" id="addBeanName" required minlength="2" autocomplete="off">
+        </div>
+        <div class="mb-3">
+          <label for="addRating">Rating: </label>
+          <input type="number" placeholder="1 to 5..." name="rating" id="addRating" required min="1" max="5" step="1">
+        </div>
+        <button type="button" name="submit" id="addSubmit">Add Coffee</button>
+      </form>
+    </section>
+    <!-- End of Add bean form -->
+    
+    <!-- Update bean form -->
+    <section id="Update" class="tabcontent">
+      <h2>Update a Coffee</h2>
+      <form id="form-update">
+        <div class="mb-3">
+          <label for="upIndex">No.: </label>
+          <input type="number" placeholder="Coffee number..." name="index" id="upIndex" required min="1" step="1">
+        </div>
+        <div class="mb-3">
+          <label for="upBeanName">Bean: </label>
+          <input type="text" placeholder="Coffee bean name..." name="beanName" id="upBeanName" required minlength="2" autocomplete="off">
+        </div>
+        <div class="mb-3">
+          <label for="upRating">Rating: </label>
+          <input type="number" placeholder="1 to 5..." name="rating" id="upRating" required min="1" max="5" step="1">
+        </div>
+        <button type="button" name="submit" id="updateSubmit">Update Coffee</button>
+      </form>
+    </section>
+    <!-- End of Update bean form -->
+
+    <!-- Delete bean form -->
+    <section id="Delete" class="tabcontent">
+      <h2>Remove a Coffee</h2>
+      <form id="form-delete">
+        <div class="mb-3">
+          <label for="delIndex">No.: </label>
+          <input type="number" placeholder="Coffee number..." name="index" id="delIndex" required min="1" step="1">
+        </div>
+        <button type="button" name="submit" id="deleteSubmit"> Remove Coffee</button>
+      </form>
+    </section>
+    <!-- End of Delete bean form -->
+    <!-- End of tab content -->
+
+    <!-- Footer -->
+    
+    <section class="assessment-tech-grid" aria-label="Coffee insights">
+      <article class="tech-card">
+        <p class="eyebrow">LIVE API DATA</p>
+        <h2>Melbourne Coffee Weather</h2>
+        <p id="weatherOutput" aria-live="polite">Loading Melbourne weather…</p>
+        <p class="tech-note">Live data supplied by Open-Meteo.</p>
+      </article>
+
+      <article class="tech-card">
+        <p class="eyebrow">EMERGING WEB TECHNOLOGY</p>
+        <h2>Community Coffee Ratings</h2>
+        <div class="chart-container">
+          <canvas id="ratingChart" role="img" aria-label="Bar chart comparing Bean Local community coffee ratings"></canvas>
+        </div>
+        <p class="tech-note">Chart.js visualises the ratings stored in the BeanList array.</p>
+      </article>
+    </section>
+
+    <footer>
+      <div>
+        <p>Bean Local &copy; <span id="date"></span> — Discover better coffee, locally</p>
+      </div>
+    </footer>
+    <!-- End of footer -->
+  </main>
+  <!-- End of main content -->
+
+
+  <!-- Load in scripts -->
+  <!-- Note: the order of the imports here is important -->
+  <!-- Load bean-list.js first so app.js can access the BeanList class -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/bean-list.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

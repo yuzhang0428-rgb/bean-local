@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Bean Local</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <main class="container">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="./index.html">Bean Local</a>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./finder.html">Coffee Finder / Cafés</a>
+        <a href="./contact.html" class="active" aria-current="page">Contact</a>
+      </div>
+    </nav>
+
+    <header class="contact-hero">
+      <p class="eyebrow">BEAN LOCAL COMMUNITY</p>
+      <h1>CONTACT <span>Share Coffee Tips & Feedback</span></h1>
+      <p class="hero-copy">Found a coffee or café we should know about? Have an idea for Bean Local? Send us a message and help make local coffee discovery more useful.</p>
+    </header>
+
+    <section class="contact-grid">
+      <div class="contact-panel">
+        <p class="eyebrow">SEND A MESSAGE</p>
+        <h2>Tell us what you discovered</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-field"><label for="contactName">Name</label><input id="contactName" name="name" type="text" required minlength="2" placeholder="Your name"></div>
+          <div class="form-field"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" required placeholder="you@example.com"></div>
+          <div class="form-field"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" required minlength="10" placeholder="Recommend a coffee, café or share your feedback..."></textarea></div>
+          <button type="submit">Send Feedback</button>
+          <div id="contactStatus" class="contact-status" role="status" aria-live="polite" tabindex="-1"></div>
+        </form>
+      </div>
+
+      <aside class="contact-panel info-panel">
+        <p class="eyebrow">ABOUT YOUR FEEDBACK</p>
+        <h2>Help Bean Local grow</h2>
+        <div class="info-item"><strong>Coffee Suggestions</strong>
+          <p>Recommend a bean you think other Melbourne coffee lovers should explore.</p></div>
+        <div class="info-item"><strong>Café Tips</strong>
+          <p>Tell us about a local café or roaster that helped you discover something new.</p></div>
+        <div class="info-item">
+          <strong>Community Feedback</strong>
+          <p><span id="feedbackCount">Loading…</span> feedback record(s) saved locally.</p>
+        </div>
+        <div class="info-item"><strong>Directory Feedback</strong>
+          <p>Let us know what could make the Coffee Finder clearer or easier to use.</p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>Bean Local &copy; <span id="date"></span> — Discover better coffee, locally</p>
+    </footer>
+  </main>
+
+  <script src="./js/config.js"></script>
+  <script src="./js/site.js"></script>
+  <script src="./js/contact.js"></script>
+
+</body>
+</html>

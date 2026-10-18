@@ -1,0 +1,30 @@
+[
+  {
+    "beanName": "Ethiopia Guji",
+    "rating": 5
+  },
+  {
+    "beanName": "Colombia Huila",
+    "rating": 4
+  },
+  {
+    "beanName": "Brazil Cerrado",
+    "rating": 4
+  },
+  {
+    "beanName": "Kenya Nyeri",
+    "rating": 5
+  },
+  {
+    "beanName": "Costa Rica Tarrazu",
+    "rating": 4
+  },
+  {
+    "beanName": "Indonesia Sumatra",
+    "rating": 1
+  },
+  {
+    "beanName": "ONA Cherry",
+    "rating": 4
+  }
+]
