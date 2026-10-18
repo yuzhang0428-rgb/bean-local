@@ -145,3 +145,11 @@ The file is read when the Coffee Finder loads and updated after coffee records a
 ## feedback.txt
 
 Stores valid feedback submitted through the Contact form.
+
+## Testing
+
+The Coffee Finder supports search, sorting, adding,
+updating and deleting coffee records.
+
+Coffee data is stored in coffees.txt and remains
+available after the page is refreshed.
