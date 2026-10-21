@@ -1,5 +1,17 @@
 [
   {
+    "beanName": "ONA Cherry",
+    "rating": 4
+  },
+  {
+    "beanName": "Kenya Nyeri",
+    "rating": 5
+  },
+  {
+    "beanName": "Indonesia Sumatra",
+    "rating": 1
+  },
+  {
     "beanName": "Ethiopia Guji",
     "rating": 5
   },
@@ -9,22 +21,10 @@
   },
   {
     "beanName": "Brazil Cerrado",
-    "rating": 4
-  },
-  {
-    "beanName": "Kenya Nyeri",
     "rating": 5
   },
   {
-    "beanName": "Costa Rica Tarrazu",
-    "rating": 4
-  },
-  {
-    "beanName": "Indonesia Sumatra",
-    "rating": 1
-  },
-  {
-    "beanName": "ONA Cherry",
-    "rating": 4
+    "beanName": "test 1",
+    "rating": 5
   }
 ]
