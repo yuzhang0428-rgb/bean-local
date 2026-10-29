@@ -26,5 +26,21 @@
   {
     "beanName": "test 1",
     "rating": 5
+  },
+  {
+    "beanName": "test",
+    "rating": 5
+  },
+  {
+    "beanName": "test 2",
+    "rating": 3
+  },
+  {
+    "beanName": "test 3",
+    "rating": 4
+  },
+  {
+    "beanName": "test 4",
+    "rating": 5
   }
 ]
